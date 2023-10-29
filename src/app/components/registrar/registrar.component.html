@@ -1,0 +1,46 @@
+<div class="group">
+    <form class="example-form" [formGroup]="user">
+        <div class="logo-image">
+            <img src="./assets/image/user.png" alt="Logo" title="Logo" width="115">
+            </div>
+            <br>
+            <h1 class="title">R E G I S T R O</h1>
+            <p class="subtitle">U - H O S P I T A L</p>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input type="text" id="nombre" name="nombre" formControlName="nombre" matInput placeholder="Nombre completo">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Usuario</mat-label>
+            <input type="text" id="user" name="user" formControlName="usuario" matInput placeholder="El usuario sera único">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Contraseña</mat-label>
+            <input type="text" id="password" name="password" formControlName="password" matInput placeholder="8 carácteres mínimo">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Teléfono</mat-label>
+            <input type="text" id="telefono" name="telefono" formControlName="telefono" matInput placeholder="Ex. 1234-5678">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput [matDatepicker]="nacimiento" formControlName="nacimiento">
+            <mat-datepicker-toggle matIconSuffix [for]="nacimiento"></mat-datepicker-toggle>
+            <mat-datepicker #nacimiento startView="month"></mat-datepicker>
+          </mat-form-field>
+
+        <button type="button" class="button buttonBlue" (click)="registrar()">Registrar
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+          <p>
+            Ya tienes cuenta?<a routerLink="/login"> Inicia Sesión</a>
+      <!--       Aún no tienes cuenta?<a routerLink="../register" routerLinkActive="active"> Crea una</a> -->
+          </p>
+        
+    </form>
+</div>

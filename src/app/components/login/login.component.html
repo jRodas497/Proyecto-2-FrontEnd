@@ -1,0 +1,28 @@
+<div class="group">
+  <form class="example-form" [formGroup]="user">
+    <div class="logo-image">
+      <img src="./assets/image/as.png" alt="Logo" title="Logo" width="115">
+    </div>
+    <br>
+    <h1 class="title">L O G I N</h1>
+    <p class="subtitle">U - H O S P I T A L</p>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input type="user" id="user" name="user" matInput placeholder="ʕ•́ᴥ•̀ʔっ" formControlName="usuario">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" id="password" name="password" matInput placeholder="(ㆆ_ㆆ)" formControlName="password">
+    </mat-form-field>
+
+    <button type="button" class="button buttonBlue" (click)="login()" >Ingresar
+      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+    </button>
+    <p>
+      Aún no tienes cuenta?<a routerLink="/registrar"> Crea una</a>
+<!--       Aún no tienes cuenta?<a routerLink="../register" routerLinkActive="active"> Crea una</a> -->
+    </p>
+  </form>
+</div>
